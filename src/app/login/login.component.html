@@ -1,0 +1,16 @@
+
+<div class="jumbotron">
+  <div class="container col-sm-12">
+    <div class="row">
+      <div class="col-sm-7 ml-auto">
+        <button routerLink="/"> Home </button>
+        <button *ngIf="!isAuthenticated" routerLink="/login"> Login </button>
+        <button *ngIf="isAuthenticated" (click)="logout()"> Logout </button>
+        <button routerLink="/protected"> Protected </button>
+        <router-outlet></router-outlet>
+              
+      </div>
+    </div>							
+  </div>
+</div>
+

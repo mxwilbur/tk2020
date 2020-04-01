@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>TurtleKrawl</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,900&display=swap" rel="stylesheet" type="text/css"/> 
+    <link href="https://fonts.googleapis.com/css?family=Just+Another+Hand|Kaushan+Script|Yellowtail&display=swap" rel="stylesheet" type="text/css"/> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" type="text/css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="assets/css/forms.css">
+  </head>
+  <body>
+    <app-root></app-root> 
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-messaging.js"></script>
+
+    <script>
+      // TODO: Replace the following with your app's Firebase project configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyBK2LDBus1QuVsAT-5avvcMEBvK5uk72Rw",
+        authDomain: "turtlekrawl-89437.firebaseapp.com",
+        databaseURL: "https://turtlekrawl-89437.firebaseio.com",
+        projectId: "turtlekrawl-89437",
+        storageBucket: "turtlekrawl-89437.appspot.com",
+        messagingSenderId: "423716312208",
+        appId: "1:423716312208:web:221543328e8c02957ab415",
+        measurementId: "G-8FCG6782DK"
+      };
+  
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+  
+  <script>  
+    var db = firebase.firestore();
+
+    db.collection("boards").add({
+      first: "Ada",
+      last: "Lovelace",
+      born: 1815
+    })
+    .then(function(docRef) {
+      console.log("Document written with ID: ", docRef.id);
+    })
+    .catch(function(error) {
+      console.error("Error adding document: ", error);
+    });
+  </script>
+    
+  </body>
+</html>    
+

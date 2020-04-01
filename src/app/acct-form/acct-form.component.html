@@ -1,0 +1,196 @@
+<content>
+  <div class="jumbotron">
+    <div class="container">
+      <div [hidden]="submitted">
+        <h2>Registration Form</h2><span class="label other" style="color:red;">* input required</span>
+        <form (ngSubmit)="onSubmit()" #acctForm="ngForm">
+            <div class="row">
+              <div class="form-group col-sm-4">
+                <label for="fname">First Name</label><span class="label other" style="color:red;">*</span>
+                <input class="form-control input-sm" type="text" placeholder="first name" id="fname" 
+                  required
+                  [(ngModel)]="model.fname" name="fname" #fname="ngModel">
+ 
+              </div>
+              <div class="form-group col-sm-4">
+                <label for="lname">Last Name</label><span class="label other" style="color:red;">*</span>
+                <input class="form-control input-sm" type="text" placeholder="last name" id="lname" 
+                  required
+                  [(ngModel)]="model.lname" name="lname" #lname="ngModel"> 
+                                 
+              </div>
+            </div>
+            <div class="row"> 
+              <div class="form-group col-sm-12"> 
+                  <label for="street">Street Address</label><span class="label other" style="color:red;">*</span>
+                  <input class="form-control input-sm" type="text" placeholder="e.g. 2 Turtle Drive" id="street" 
+                    required
+                    [(ngModel)]="model.street" name="street" #street="ngModel">
+                                       
+              </div>
+            </div> 
+            <div class="row">
+              <div class="form-group col-sm-4">
+                  <label for="city">City</label><span class="label other" style="color:red;">*</span>
+                  <input class="form-control input-sm" type="text" placeholder="city" id="city" 
+                    required
+                    [(ngModel)]="model.city" name="city" #city="ngModel">
+                   
+              </div>
+              <div class="form-group col-sm-2">
+                  <label for="state">State</label><span class="label other" style="color:red;">*</span>
+                  <select class="form-control input-sm" id="state" required
+                    [(ngModel)]="model.state" name="state" #state="ngModel">
+                    
+                    <!-- <option *ngFor="let code of State" [value]="code">{{code}}</option> -->
+                    <option selected> Choose...</option>
+                    <option>AK</option>
+                    <option>AL</option>
+                    <option>AR</option>
+                    <option>AZ</option>
+                    <option>CA</option>
+                    <option>CO</option>
+                    <option>CT</option>
+                    <option>DC</option>
+                    <option>DE</option>
+                    <option>FL</option>
+                    <option>GA</option>
+                    <option>HI</option>
+                    <option>IA</option>
+                    <option>ID</option>
+                    <option>IL</option>
+                    <option>IN</option>
+                    <option>KS</option>
+                    <option>KY</option>
+                    <option>LA</option>
+                    <option>MA</option>
+                    <option>MD</option>
+                    <option>ME</option>
+                    <option>MI</option>
+                    <option>MN</option>
+                    <option>MO</option>
+                    <option>MS</option>
+                    <option>MT</option>
+                    <option>NC</option>
+                    <option>ND</option>
+                    <option>NE</option>
+                    <option>NH</option>
+                    <option>NJ</option>
+                    <option>NM</option>
+                    <option>NV</option>
+                    <option>NY</option>
+                    <option>OH</option>
+                    <option>OK</option>
+                    <option>OR</option>
+                    <option>PA</option>
+                    <option>RI</option>
+                    <option>SC</option>
+                    <option>SD</option>
+                    <option>TN</option>
+                    <option>TX</option>
+                    <option>UT</option>
+                    <option>VA</option>
+                    <option>VT</option>
+                    <option>WA</option>
+                    <option>WI</option>
+                    <option>WV</option>
+                    <option>WY</option>
+                  </select>
+              </div>
+              <div class="form-group col-sm-3">
+                  <label for="zip">Zip Code</label><span class="label other" style="color:red;">*</span>
+                  <input class="form-control input-sm" type="text" placeholder="e.g. 01234" id="zip" 
+                    required
+                    [(ngModel)]="model.zip" name="zip" #zip="ngModel">
+                       
+              </div>
+            </div>
+            <div class="row"> 
+              <div class="form-group col-sm-3">               
+                  <label for="shirttype">Shirt Type</label><span class="label other" style="color:red;">*</span>
+                  <select class="form-control input-sm" id="shirttype" required
+                  [(ngModel)]="model.shirttype" name="shirttype" #shirttype="ngModel">
+                    <!-- <option *ngFor="let type of shirttypes" [value]="type">{{type}}</option> -->
+                    <option selected> Choose...</option>
+                    <option>Youth</option>
+                    <option>Female</option>
+                    <option>Male</option>
+                  </select>
+              </div>
+              <div class="form-group col-sm-3">               
+                <label for="shirtsize">Shirt Size</label><span class="label other" style="color:red;">*</span>
+                <select class="form-control input-sm" id="shirtsize" required
+                [(ngModel)]="model.shirtsize" name="shirtsize" #shirtsize="ngModel">               
+                  <!-- <option *ngFor="let size of shirtsize" [value]="size">{{size}}</option> -->
+                  <option selected> Choose...</option>
+                    <option>Youth Medium</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                    <option>XXL male only</option>
+                </select>
+            </div>
+            <div class="row">
+              <div class="form-group col-sm-4">
+                <label for="phone">Phone number</label><span class="label other" style="color:red;">*</span>
+                <input class="form-control input-sm" type="text" placeholder="321-456-7890" id="phone" 
+                  required
+                  [(ngModel)]="model.phone" name="phone" #phone="ngModel">
+                                   
+              </div>
+              <div class="form-group col-sm-4">
+                <label for="email">email</label><span class="label other" style="color:red;">*</span>
+                <input class="form-control input-sm" type="text" placeholder="smith@xmail.com" id="email" 
+                  required
+                  [(ngModel)]="model.email" name="email" #email="ngModel">
+                  
+              </div>
+            </div>
+            </div>
+            <!-- <div class="row">  -->
+              <div class="form-group col-sm-9">  
+                <button type="submit" class="btn btn-success input-sm" [disabled]="!acctForm.form.valid">Submit</button>
+                <button type="button" class="btn btn-outline-primary input-sm" (click)="newAcct(); acctForm.reset()">New Acct</button>
+                <button class="btn btn-primary input-sm" (click)="goBack()">go back</button> 
+              </div>
+            <!-- </div>   -->
+        </form>
+      </div>
+    </div>
+  </div>						
+</content>	
+<content>
+  <div class="jumbotron"> 
+    <div class="container">
+      <div [hidden]="!submitted">
+        <h2>You submitted the following:</h2>
+        <div class="row">
+          <div class="col-xs-3">Name</div>
+          <div class="col-xs-9">{{ ": " + model.fname + " " + model.lname }}</div>
+        </div>
+        <div class ="row">
+          <div class="col-xs-3">Address</div>
+          <div class="col-xs-9">{{ ": " + model.street + " " }}</div>
+        </div>
+        <div class="row">
+          <div class="col-xs-3"></div>
+          <div class="col-xs-9">{{ " " + model.city + ", " + model.state +
+            " " + model.zip }}</div>
+        </div>
+        <div class ="row">
+          <div class="col-xs-3">Shirt Info</div>
+          <div class="col-xs-9">{{ ": " + model.shirttype + ", " + model.shirtsize }}</div>
+        </div>
+        <div class ="row">
+          <div class="col-xs-3">Contact Info</div>
+          <div class="col-xs-9">{{ ": " + model.phone + ", " + model.email }}</div>
+        </div>
+
+        <br>
+        <button class="btn btn-primary" (click)="submitted=false">Edit</button>
+        <button class="btn btn-success" (click)="submitted=true">Submit</button>
+      </div>
+    </div>
+  </div>
+</content>

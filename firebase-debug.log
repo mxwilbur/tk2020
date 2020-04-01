@@ -1,0 +1,112 @@
+[debug] [2020-03-18T20:08:49.175Z] ----------------------------------------------------------------------
+[debug] [2020-03-18T20:08:49.177Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2020-03-18T20:08:49.177Z] CLI Version:   7.15.1
+[debug] [2020-03-18T20:08:49.177Z] Platform:      darwin
+[debug] [2020-03-18T20:08:49.177Z] Node Version:  v12.14.1
+[debug] [2020-03-18T20:08:49.177Z] Time:          Wed Mar 18 2020 16:08:49 GMT-0400 (Eastern Daylight Time)
+[debug] [2020-03-18T20:08:49.177Z] ----------------------------------------------------------------------
+[debug] [2020-03-18T20:08:49.177Z] 
+[debug] [2020-03-18T20:08:49.183Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-03-18T20:08:49.184Z] > authorizing via signed-in user
+[debug] [2020-03-18T20:08:49.184Z] [iam] checking project turtlekrawl-89437 for permissions ["firebase.projects.get"]
+[debug] [2020-03-18T20:08:49.185Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/turtlekrawl-89437:testIamPermissions  
+
+[debug] [2020-03-18T20:08:49.520Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-18T20:08:49.522Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/turtlekrawl-89437  
+ 
+[debug] [2020-03-18T20:08:49.748Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/mxwilbur/tk2020'...
+[info] 
+[debug] [2020-03-18T20:08:49.751Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/turtlekrawl-89437/webApps/-/config  
+ 
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "12"
+[info] ✔  functions: functions emulator started at http://localhost:5001
+[debug] [2020-03-18T20:08:50.237Z] <<< HTTP RESPONSE 200
+[info] i  functions: Watching "/Users/mxwilbur/tk2020/functions" for Cloud Functions...
+[debug] [2020-03-18T20:08:50.274Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-18T20:08:50.274Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-03-18T20:08:50.274Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-18T20:08:50.275Z] [worker-~diagnostic~-7ddf953e-c11d-44db-8da9-cc563266264f]: Assigning socketPath: /var/folders/tk/w17djwtn6hl43dslhgntcfbc0000gn/T/fire_emu_52155.sock
+[debug] [2020-03-18T20:08:50.275Z] [worker-~diagnostic~-7ddf953e-c11d-44db-8da9-cc563266264f]: BUSY
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+[debug] [2020-03-18T20:08:50.471Z] [runtime-status] [52155] Functions runtime initialized. {"cwd":"/Users/mxwilbur/tk2020/functions","node_version":"12.14.1"}
+[debug] [2020-03-18T20:08:50.472Z] [runtime-status] [52155] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-18T20:08:50.475Z] [runtime-status] [52155] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/mxwilbur/tk2020/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-18T20:08:50.476Z] [runtime-status] [52155] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/mxwilbur/tk2020/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-18T20:08:50.477Z] [runtime-status] [52155] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/mxwilbur/tk2020/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  Error: Cannot find module '/Users/mxwilbur/tk2020/functions/lib/index.js'. Please verify that the package.json has a valid "main" entry
+    at tryPackage (internal/modules/cjs/loader.js:297:19)
+    at Function.Module._findPath (internal/modules/cjs/loader.js:528:18)
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:780:27)
+    at Function.Module._load (internal/modules/cjs/loader.js:686:27)
+    at Module.require (internal/modules/cjs/loader.js:848:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:724:33
+    at Generator.next (<anonymous>)
+    at fulfilled (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:5:58)
+    at processTicksAndRejections (internal/process/task_queues.js:94:5)
+[warn] ⚠  We were unable to load your functions code. (see above)
+   - It appears your code is written in Typescript, which must be compiled before emulation.
+   - You may be able to run "npm run build" in your functions directory to resolve this.
+[debug] [2020-03-18T20:08:50.528Z] [worker-~diagnostic~-7ddf953e-c11d-44db-8da9-cc563266264f]: exited
+[debug] [2020-03-18T20:08:50.528Z] [worker-~diagnostic~-7ddf953e-c11d-44db-8da9-cc563266264f]: FINISHED
+[debug] [2020-03-19T14:56:01.881Z] ----------------------------------------------------------------------
+[debug] [2020-03-19T14:56:01.882Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2020-03-19T14:56:01.882Z] CLI Version:   7.15.1
+[debug] [2020-03-19T14:56:01.882Z] Platform:      darwin
+[debug] [2020-03-19T14:56:01.882Z] Node Version:  v12.14.1
+[debug] [2020-03-19T14:56:01.883Z] Time:          Thu Mar 19 2020 10:56:01 GMT-0400 (Eastern Daylight Time)
+[debug] [2020-03-19T14:56:01.883Z] ----------------------------------------------------------------------
+[debug] [2020-03-19T14:56:01.883Z] 
+[debug] [2020-03-19T14:56:01.889Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-03-19T14:56:01.890Z] > authorizing via signed-in user
+[debug] [2020-03-19T14:56:01.890Z] [iam] checking project turtlekrawl-89437 for permissions ["firebase.projects.get"]
+[debug] [2020-03-19T14:56:01.891Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-03-19T14:56:01.891Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-03-19T14:56:02.102Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-19T14:56:02.114Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/turtlekrawl-89437:testIamPermissions  
+
+[debug] [2020-03-19T14:56:02.400Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-19T14:56:02.401Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/turtlekrawl-89437  
+ 
+[debug] [2020-03-19T14:56:02.645Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/mxwilbur/tk2020'...
+[info] 
+[debug] [2020-03-19T14:56:02.647Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/turtlekrawl-89437/webApps/-/config  
+ 
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "12"
+[info] ✔  functions: functions emulator started at http://localhost:5001
+[debug] [2020-03-19T14:56:03.188Z] <<< HTTP RESPONSE 200
+[info] i  functions: Watching "/Users/mxwilbur/tk2020/functions" for Cloud Functions...
+[debug] [2020-03-19T14:56:03.218Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-19T14:56:03.219Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-03-19T14:56:03.219Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-19T14:56:03.219Z] [worker-~diagnostic~-807897a3-78ca-4f0f-85a9-d3a1dbbcd6b3]: Assigning socketPath: /var/folders/tk/w17djwtn6hl43dslhgntcfbc0000gn/T/fire_emu_54296.sock
+[debug] [2020-03-19T14:56:03.219Z] [worker-~diagnostic~-807897a3-78ca-4f0f-85a9-d3a1dbbcd6b3]: BUSY
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+[debug] [2020-03-19T14:56:03.409Z] [runtime-status] [54296] Functions runtime initialized. {"cwd":"/Users/mxwilbur/tk2020/functions","node_version":"12.14.1"}
+[debug] [2020-03-19T14:56:03.409Z] [runtime-status] [54296] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-19T14:56:03.413Z] [runtime-status] [54296] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/mxwilbur/tk2020/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-19T14:56:03.415Z] [runtime-status] [54296] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/mxwilbur/tk2020/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-19T14:56:03.415Z] [runtime-status] [54296] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/mxwilbur/tk2020/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  Error: Cannot find module '/Users/mxwilbur/tk2020/functions/lib/index.js'. Please verify that the package.json has a valid "main" entry
+    at tryPackage (internal/modules/cjs/loader.js:297:19)
+    at Function.Module._findPath (internal/modules/cjs/loader.js:528:18)
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:780:27)
+    at Function.Module._load (internal/modules/cjs/loader.js:686:27)
+    at Module.require (internal/modules/cjs/loader.js:848:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:724:33
+    at Generator.next (<anonymous>)
+    at fulfilled (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:5:58)
+    at processTicksAndRejections (internal/process/task_queues.js:94:5)
+[warn] ⚠  We were unable to load your functions code. (see above)
+   - It appears your code is written in Typescript, which must be compiled before emulation.
+   - You may be able to run "npm run build" in your functions directory to resolve this.
+[debug] [2020-03-19T14:56:03.466Z] [worker-~diagnostic~-807897a3-78ca-4f0f-85a9-d3a1dbbcd6b3]: exited
+[debug] [2020-03-19T14:56:03.466Z] [worker-~diagnostic~-807897a3-78ca-4f0f-85a9-d3a1dbbcd6b3]: FINISHED
