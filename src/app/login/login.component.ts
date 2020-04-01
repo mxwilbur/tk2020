@@ -9,7 +9,7 @@ import * as OktaSignIn from '@okta/okta-signin-widget';
   template: `
     <!-- Container to inject the Sign-In Widget -->
     <div id="okta-signin-container"></div>`,
-    styles: []
+  styles: ['okta-sign-in.min.css']
 })
 
 export class LoginComponent implements OnInit {
